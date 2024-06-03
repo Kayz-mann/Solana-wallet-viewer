@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { SCREENS } from "../../shared/constants";
 import Home from "../screens/Home";
-import { Transaction } from "@solana/web3.js";
+
 import Transactions from "../screens/Transactions";
 
 export type HomeNavParamList = {

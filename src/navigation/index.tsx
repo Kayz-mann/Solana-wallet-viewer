@@ -2,8 +2,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { isReadyRef, navigationRef } from "react-navigation-helpers";
 import { SCREENS, SCREENSTYPES } from "../../shared/constants";
+
+import HomeNav from "./HomeNav";
 import { RootStackParamList } from "../../shared/types";
-import AuthNav from "./HomeNav";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -19,7 +20,7 @@ export function RootNavigator({
       initialRouteName={initialRouteName as any}
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name={SCREENS.HomeNav} component={AuthNav} />
+      <Stack.Screen name={SCREENS.HomeNav} component={HomeNav} />
     </Stack.Navigator>
   );
 }

@@ -78,7 +78,7 @@ const BalanceCard = ({ walletAddress, walletBalance }: BalanceCardType) => {
           <Text mt="m" variant="title2" color="bg">
             {isMasked
               ? maskString(walletBalance as unknown as string)
-              : walletBalance}{" "}
+              : Object.freeze(walletBalance)}{" "}
             SOL
           </Text>
           <TouchableOpacity

@@ -1,8 +1,7 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import {describe, expect, test} from '@jest/globals'
+import {describe, expect} from '@jest/globals'
 
-import { Connection, PublicKey } from '@solana/web3.js';
-import axios from 'axios';
+import { Connection } from '@solana/web3.js';
 import { useWalletData } from './useWalletData';
 
 jest.mock('@solana/web3.js', () => ({
